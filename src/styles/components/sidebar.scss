@@ -1,0 +1,38 @@
+@import 'styles/variables';
+
+.side-bar {
+	position: sticky;
+	top: 0px;
+	padding: 16px;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	-webkit-box-pack: justify;
+	justify-content: space-between;
+
+	&--links {
+		margin-top: 7rem;
+		margin-left: auto;
+		margin-right: auto;
+
+		.nav-link {
+			position: relative;
+			display: block;
+			margin-bottom: 1.5rem;
+			color: $gain-grey;
+
+			&.active {
+				color: $gain-purple;
+				font-weight: 600;
+				transition: all ease-out;
+			}
+
+			.route-name {
+				font-weight: 500;
+				font-size: 1.2rem;
+				line-height: 2.25rem;
+				font-family: 'BRFirma-bold';
+			}
+		}
+	}
+}

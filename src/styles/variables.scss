@@ -1,0 +1,36 @@
+$gain-grey: #acafb3;
+$gain-light-gray: #f3f5f7;
+$gain-purple: #1a073b;
+$gain-pink: #f53e6a;
+$gain-red: #d34242;
+$gain-white: #ffffff;
+
+//Breakpoints
+@mixin mobile {
+	@media (max-width: 599px) {
+		@content;
+	}
+}
+
+@mixin tablet {
+	@media (max-width: 768px) {
+		@content;
+	}
+}
+
+@mixin for-tablet-up {
+	@media (min-width: 767px) {
+		@content;
+	}
+}
+
+@mixin desktop-up {
+	@media (min-width: 1125px) {
+		@content;
+	}
+}
+@mixin desktop-down {
+	@media (max-width: 1199px) {
+		@content;
+	}
+}

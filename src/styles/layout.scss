@@ -1,0 +1,52 @@
+@import 'styles/variables';
+.app {
+	.app-container {
+		display: flex;
+		width: 100%;
+
+		.left-col {
+			transition: left 0.4s;
+			background-color: #fff;
+			box-shadow: inset -1px 0 0 #f1f1f5;
+			z-index: 1000;
+			display: flex;
+			min-width: 240px;
+			flex-shrink: 0;
+			flex-direction: column;
+			transition: transform 0.4s;
+
+			@include desktop-down {
+				position: fixed;
+				top: 0;
+				left: 0;
+				height: 100vh;
+
+				&.hide-left {
+					transform: translateX(-100%);
+				}
+
+				&.show-left {
+					transform: translateX(0);
+					left: 0;
+				}
+			}
+		}
+
+		.right-col {
+			background-color: $gain-light-gray;
+			display: flex;
+			min-width: 0px;
+			flex-direction: column;
+			-webkit-box-flex: 1;
+			flex-grow: 1;
+		}
+
+		.route-container {
+			background-color: #f3f5f7;
+			padding: 30px 30px;
+			@include desktop-down {
+				min-height: 100vh;
+			}
+		}
+	}
+}
